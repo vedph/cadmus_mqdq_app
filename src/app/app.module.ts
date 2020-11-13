@@ -234,9 +234,10 @@ import { INDEX_LOOKUP_DEFINITIONS } from './index-lookup-definitions';
         { path: '**', component: HomeComponent },
       ],
       {
-        initialNavigation: 'enabled',
-        useHash: true,
-      }
+    initialNavigation: 'enabled',
+    useHash: true,
+    relativeLinkResolution: 'legacy'
+}
     ),
     // flex
     FlexLayoutModule,
