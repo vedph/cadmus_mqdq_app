@@ -3,7 +3,7 @@
 Quick Docker image build:
 
 1. `ng build --prod`
-2. `docker build . -t vedph2020/cadmus-mqdq-app:1.0.8 -t vedph2020/cadmus-mqdq-app:latest` (replace with the current version)
+2. `docker build . -t vedph2020/cadmus-mqdq-app:1.0.9 -t vedph2020/cadmus-mqdq-app:latest` (replace with the current version)
 
 Web application frontend for Cadmus _Musisque Deoque_. This application is built by packing together a number of components:
 
