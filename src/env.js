@@ -3,7 +3,7 @@
   window.__env = window.__env || {};
 
   // environment-dependent settings
-  window.__env.apiUrl = 'http://localhost:60380/api/';
-  window.__env.databaseId = 'cadmus';
+  window.__env.apiUrl = 'http://localhost:53323/api/';
+  window.__env.databaseId = 'cadmus-mqdq';
   window.__env.name = 'MQDQ';
 }(this));
