@@ -54,7 +54,7 @@ services:
       - cadmus-mongo
       - cadmus-index
     # wait for mongo before starting: https://github.com/vishnubob/wait-for-it
-    command: ["./wait-for-it.sh", "cadmus-mongo:27017", "--", "dotnet", "CadmusApi.dll"]
+    command: ["./wait-for-it.sh", "cadmus-mongo:27017", "--", "dotnet", "CadmusMqdqApi.dll"]
     environment:
       # for Windows use : as separator, for non Windows use __
       # (see https://github.com/aspnet/Configuration/issues/469)
@@ -68,7 +68,7 @@ services:
       - SENDGRID__SENDEREMAIL=info@cadmus.com
       - SENDGRID__SENDERNAME=cadmus
       - SENDGRID__APIKEY=todo
-      - SERILOG__CONNECTIONSTRING=mongodb://cadmus-mongo:27017/cadmus-logs
+      - SERILOG__CONNECTIONSTRING=mongodb://cadmus-mongo:27017/cadmus-mqdq-logs
       - STOCKUSERS__0__PASSWORD=P4ss-W0rd!
     networks:
       - cadmus-network
