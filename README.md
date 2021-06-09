@@ -8,8 +8,8 @@ Quick Docker image build:
 **Production** (this refers to VeDPH):
 
 1. build as currently hosted in a subfolder: `ng build --base-href /cadmus/mqdq/`;
-2. manually edit in `dist` folder `env.js` to change the API URI (currently `https://penia.cophilab.ilc.cnr.it/api/`);
-3. `docker build . -t vedph2020/cadmus-mqdq-app:1.0.24-prod`.
+2. manually edit in `dist` folder `env.js` to change the API URI (currently `https://cophilab.ilc.cnr.it/cadmus/mqdq/api/`);
+3. `docker build . -t vedph2020/cadmus-mqdq-app:1.0.25-prod`.
 
 Web application frontend for Cadmus _Musisque Deoque_. This application is built by packing together a number of components:
 
