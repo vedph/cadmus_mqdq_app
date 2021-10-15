@@ -18,3 +18,7 @@ Web application frontend for Cadmus _Musisque Deoque_. This application is built
 - _backend_: the corresponding backend API is [Cadmus API](https://github.com/vedph/cadmus_api). The MQDQ project has no specific parts, and thus uses the general-purpose backend with its stock parts and fragments.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.6.
+
+## History
+
+- 2021-10-15: upgraded to use newer general parts with replaced document references. This anyway does not directly affects MQDQ, as it does not use any part or fragment including the document references model. New Docker images have been generated with version dump to 1.1.0 because of the small breaking change in the backend for the Mongo auth database.
