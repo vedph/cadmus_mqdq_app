@@ -5,8 +5,6 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
-import { AppComponent } from './app.component';
-
 // flex
 import { FlexLayoutModule } from '@angular/flex-layout';
 // ngx monaco
@@ -16,15 +14,12 @@ import { MarkdownModule } from 'ngx-markdown';
 // Akita
 import { AkitaNgDevtools } from '@datorama/akita-ngdevtools';
 
-import {
-  CadmusCoreModule,
-  PendingChangesGuard,
-  EnvServiceProvider,
-} from '@myrmidon/cadmus-core';
+import { EnvServiceProvider, NgToolsModule } from '@myrmidon/ng-tools';
+import { NgMatToolsModule } from '@myrmidon/ng-mat-tools';
+import { CadmusCoreModule, PendingChangesGuard } from '@myrmidon/cadmus-core';
 import { CadmusUiModule } from '@myrmidon/cadmus-ui';
 import { CadmusPartGeneralUiModule } from '@myrmidon/cadmus-part-general-ui';
 import { CadmusPartPhilologyUiModule } from '@myrmidon/cadmus-part-philology-ui';
-import { HomeComponent } from './home/home.component';
 import { CadmusMaterialModule } from '@myrmidon/cadmus-material';
 import {
   AuthInterceptor,
@@ -32,15 +27,15 @@ import {
   AuthGuardService,
   EditorGuardService,
 } from '@myrmidon/cadmus-api';
+
+import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
 import { PART_EDITOR_KEYS } from './part-editor-keys';
 import { ITEM_BROWSER_KEYS } from './item-browser-keys';
 import { INDEX_LOOKUP_DEFINITIONS } from './index-lookup-definitions';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent
-  ],
+  declarations: [AppComponent, HomeComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -160,6 +155,8 @@ import { INDEX_LOOKUP_DEFINITIONS } from './index-lookup-definitions';
     CadmusPartGeneralUiModule,
     CadmusPartPhilologyUiModule,
     CadmusUiModule,
+    NgToolsModule,
+    NgMatToolsModule,
   ],
   providers: [
     EnvServiceProvider,
