@@ -3,7 +3,7 @@
 Quick Docker image build:
 
 1. `ng build --configuration production`
-2. `docker build . -t vedph2020/cadmus-mqdq-app:2.0.0 -t vedph2020/cadmus-mqdq-app:latest` (replace with the current version)
+2. `docker build . -t vedph2020/cadmus-mqdq-app:3.0.0 -t vedph2020/cadmus-mqdq-app:latest` (replace with the current version)
 
 **Production** (this refers to VeDPH):
 
@@ -21,8 +21,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## History
 
+- 2021-11-22: upgraded to refactored API endpoints. Image versions bumped to 3.0.0.
 - 2021-11-21: upgraded to Cadmus shell frontend libraries 0.3.0 (incorporating `@myrmidon/ng-tools` and `@myrmidon/ng-mat-tools`, and upgraded to strict mode). Image versions bumped to 2.0.0 for frontend, and 2.0.1 for backend (minor updates).
-
 - 2021-11-11: upgraded to Angular 13 (backend upgraded to .NET 6).
-
 - 2021-10-15: upgraded to use newer general parts with replaced document references. This anyway does not directly affects MQDQ, as it does not use any part or fragment including the document references model. New Docker images have been generated with version dump to 1.1.0 because of the small breaking change in the backend for the Mongo auth database.
