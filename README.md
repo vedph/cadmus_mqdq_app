@@ -3,7 +3,7 @@
 Quick Docker image build:
 
 1. `ng build --configuration production`
-2. `docker build . -t vedph2020/cadmus-mqdq-app:4.0.1 -t vedph2020/cadmus-mqdq-app:latest` (replace with the current version)
+2. `docker build . -t vedph2020/cadmus-mqdq-app:4.0.2 -t vedph2020/cadmus-mqdq-app:latest` (replace with the current version)
 
 **Production** (this refers to VeDPH):
 
@@ -21,7 +21,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## History
 
-- 2021-12-22: updated packages. Frontend image version 4.0.1, backend 3.0.2.
+- 2022-01-10: updated packages.
+- 2021-12-22: updated packages. Frontend image version 4.0.2, backend 3.0.3.
 - 2021-12-19: refactored frontend according to the new [shell libraries](https://github.com/vedph/cadmus-shell). Frontend image version 4.0.0, backend 3.0.1.
 - 2021-11-22: upgraded to refactored API endpoints. Image versions bumped to 3.0.0.
 - 2021-11-21: upgraded to Cadmus shell frontend libraries 0.3.0 (incorporating `@myrmidon/ng-tools` and `@myrmidon/ng-mat-tools`, and upgraded to strict mode). Image versions bumped to 2.0.0 for frontend, and 2.0.1 for backend (minor updates).
