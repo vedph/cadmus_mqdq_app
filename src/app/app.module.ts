@@ -44,8 +44,6 @@ import { AkitaNgDevtools } from '@datorama/akita-ngdevtools';
 import { MonacoEditorModule } from 'ngx-monaco-editor';
 // ngx-markdown
 import { MarkdownModule } from 'ngx-markdown';
-// moment
-import { MomentModule } from 'ngx-moment';
 
 // myrmidon
 import { EnvServiceProvider, NgToolsModule } from '@myrmidon/ng-tools';
@@ -139,8 +137,6 @@ import { CadmusRefsAssertedChronotopeModule } from '@myrmidon/cadmus-refs-assert
     MonacoEditorModule.forRoot(),
     // markdown
     MarkdownModule.forRoot(),
-    // moment
-    MomentModule,
     // myrmidon
     NgToolsModule,
     NgMatToolsModule,

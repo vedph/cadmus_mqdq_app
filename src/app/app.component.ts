@@ -8,6 +8,7 @@ import {
   GravatarService,
   User,
 } from '@myrmidon/auth-jwt-login';
+import { EnvService } from '@myrmidon/ng-tools';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,7 @@ import {
 export class AppComponent implements OnInit {
   public user?: User;
   public logged?: boolean;
+  public version: string;
   public itemBrowsers?: ThesaurusEntry[];
 
   constructor(
@@ -26,8 +28,11 @@ export class AppComponent implements OnInit {
     private _gravatarService: GravatarService,
     private _appService: AppService,
     private _appQuery: AppQuery,
-    private _router: Router
-  ) {}
+    private _router: Router,
+    env: EnvService
+  ) {
+    this.version = env.get('version') || '';
+  }
 
   ngOnInit(): void {
     this.user = this._authService.currentUserValue || undefined;

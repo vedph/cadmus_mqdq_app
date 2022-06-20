@@ -2,14 +2,15 @@
 
 Quick Docker image build:
 
-1. `ng build --configuration production`
-2. `docker build . -t vedph2020/cadmus-mqdq-app:4.0.2 -t vedph2020/cadmus-mqdq-app:latest` (replace with the current version)
+1. update version in `env.js`
+2. `ng build --configuration production`
+3. `docker build . -t vedph2020/cadmus-mqdq-app:5.0.0 -t vedph2020/cadmus-mqdq-app:latest` (replace with the current version)
 
 **Production** (this refers to VeDPH):
 
 1. build as currently hosted in a subfolder: `ng build --base-href /cadmus/mqdq/ --configuration production`;
 2. manually edit in `dist` folder `env.js` to change the API URI (currently `https://cophilab.ilc.cnr.it/cadmus/mqdq/api/`);
-3. `docker build . -t vedph2020/cadmus-mqdq-app:1.0.29-prod`.
+3. `docker build . -t vedph2020/cadmus-mqdq-app:5.0.0-prod`.
 
 Web application frontend for Cadmus _Musisque Deoque_. This application is built by packing together a number of components:
 
@@ -20,6 +21,12 @@ Web application frontend for Cadmus _Musisque Deoque_. This application is built
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.6.
 
 ## History
+
+### 5.0.0
+
+- 2022-06-20: upgraded to Angular 14, changed forms to typed, added version number.
+
+### 4.0.2
 
 - 2022-01-10: updated packages.
 - 2021-12-22: updated packages. Frontend image version 4.0.2, backend 3.0.3.
