@@ -22,6 +22,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## History
 
+### 5.1.0
+
+- 2022-10-11:
+  - updated packages.
+  - added preview.
+
 ### 5.0.0
 
 - 2022-06-20: upgraded to Angular 14, changed forms to typed, added version number.

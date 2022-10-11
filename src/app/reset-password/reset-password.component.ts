@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import {
+  UntypedFormBuilder,
+  Validators,
   FormGroup,
   FormControl,
-  FormBuilder,
-  Validators,
 } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { AuthJwtAccountService } from '@myrmidon/auth-jwt-admin';
@@ -21,7 +21,7 @@ export class ResetPasswordComponent {
   constructor(
     private _snackbar: MatSnackBar,
     private _accountService: AuthJwtAccountService,
-    formBuilder: FormBuilder
+    formBuilder: UntypedFormBuilder
   ) {
     this.email = formBuilder.control(null, [
       Validators.required,

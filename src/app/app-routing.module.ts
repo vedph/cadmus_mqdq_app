@@ -2,7 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 // myrmidon
-import { AuthJwtAdminGuardService, AuthJwtGuardService } from '@myrmidon/auth-jwt-login';
+import {
+  AuthJwtAdminGuardService,
+  AuthJwtGuardService,
+} from '@myrmidon/auth-jwt-login';
 
 // libraries in this workspace
 import { EditorGuardService } from '@myrmidon/cadmus-api';
@@ -92,6 +95,15 @@ const routes: Routes = [
     loadChildren: () =>
       import('@myrmidon/cadmus-part-philology-pg').then(
         (module) => module.CadmusPartPhilologyPgModule
+      ),
+    canActivate: [AuthJwtGuardService],
+  },
+  // cadmus - preview
+  {
+    path: 'preview',
+    loadChildren: () =>
+      import('@myrmidon/cadmus-preview-pg').then(
+        (module) => module.CadmusPreviewPgModule
       ),
     canActivate: [AuthJwtGuardService],
   },
